@@ -1,0 +1,40 @@
+@host = http://localhost:3000
+@voucherId = 65ad8a581cef6124e6a56d8f
+
+# Pobieranie o kazdym voucherze 
+GET {{host}}/vouchers
+
+###
+
+###
+
+# Tworzenie nowego vouchera
+POST {{host}}/vouchers
+Content-Type: application/json
+
+{
+  "code": "DISCOUNT2024",
+  "discount": 20,
+  "expirationDate": "2024-12-31"
+}
+
+###
+
+# Pobieranie informacji o voucherze (zakładając, że endpoint wymaga kodu vouchera)
+GET {{host}}/vouchers/DISCOUNT2024
+
+###
+
+# Aktualizacja vouchera (jeśli taka funkcjonalność istnieje)
+PUT {{host}}/vouchers/65ad8bfcf55aae77aa331f6e
+Content-Type: application/json
+
+{
+  "discount": 25,
+  "expirationDate": "2025-12-31"
+}
+
+###
+
+# Usuwanie vouchera (jeśli taka funkcjonalność istnieje)
+DELETE {{host}}/vouchers/65ad8bfcf55aae77aa331f6e

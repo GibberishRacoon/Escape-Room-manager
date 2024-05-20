@@ -1,0 +1,12 @@
+### Pobieranie listy uprawnień użytkowników
+GET http://localhost:3000/permissions
+Accept: application/json
+
+### Aktualizacja uprawnień użytkownika. zmieniony endpoint dla wygody 
+PUT http://localhost:3000/permissions/65ac303e845e1fbd3ef61a23
+Content-Type: application/json
+Accept: application/json
+
+{
+  "isAdmin": false
+}

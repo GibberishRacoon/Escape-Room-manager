@@ -1,0 +1,52 @@
+// roomsearch.css .room-search {
+//   margin-top: 25px;
+//   padding: 20px;
+//   background-color: #222; /* Tło ciemnego motywu */
+//   color: #fff; /* Kolor tekstu w ciemnym motywie */
+// }
+
+// .results {
+//   background-color: #333; /* Tło wyników wyszukiwania */
+//   padding: 10px;
+//   margin-top: 10px;
+//   border-radius: 5px;
+// }
+
+// .room-details {
+//   margin-bottom: 20px;
+// }
+
+// .rooms-display {
+//   /* Usunięcie max-height i overflow, aby elementy były domyślnie widoczne */
+// }
+
+// .rooms-display.open {
+//   max-height: 500px; /* Maksymalna wysokość do rozwinięcia */
+//   overflow: auto;
+// }
+
+// .result-box {
+//   background-color: #333; /* Tło wyniku */
+//   padding: 10px;
+//   margin-top: 10px;
+//   border-radius: 5px; /* Zaokrąglenie rogów */
+//   border: 1px solid #555; /* Dodajmy obramowanie */
+//   transition: background-color 0.3s ease; /* Dodajmy efekt przejścia */
+// }
+
+// /* Dodajmy styl dla wyników, które są otwarte (klasa .open jest nadawana dynamicznie w JS) */
+// .result-box.open {
+//   max-height: 500px; /* Maksymalna wysokość do rozwinięcia */
+//   overflow: auto;
+// }
+
+// /* Dodajmy styl po najechaniu myszką */
+// .result-box:hover {
+//   background-color: #444; /* Zmieniamy kolor tła po najechaniu */
+// }
+
+// .leaflet-container {
+//   height: 400px; /* lub inna wysokość */
+//   width: 100%; /* pełna szerokość kontenera */
+//   z-index: 10; /* upewnij się, że mapa jest na wierzchu, jeśli to konieczne */
+// }

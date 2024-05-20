@@ -1,0 +1,7 @@
+### Pobieranie statystyk użytkowników
+GET http://localhost:3000/analytics/users
+Accept: application/json
+
+### Pobieranie analizy popularności pokojów
+GET http://localhost:3000/analytics/rooms
+Accept: application/json

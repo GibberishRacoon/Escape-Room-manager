@@ -1,0 +1,38 @@
+@host = http://localhost:3000
+@roomId = 65ac4744845e1fbd3ef61a36
+@userId = 65ac303e845e1fbd3ef61a23
+@reservationId = reservation1
+
+###
+# Pobieranie wszystkich rezerwacji
+GET {{host}}/reservations
+
+###
+# Tworzenie nowej rezerwacji
+POST {{host}}/reservations
+Content-Type: application/json
+
+{
+  "room": "{{roomId}}",
+  "user": "{{userId}}",
+  "startDate": "2024-01-01T14:00:00Z",
+  "endDate": "2024-01-03T11:00:00Z"
+}
+
+###
+# Pobieranie szczegółów konkretnej rezerwacji
+GET {{host}}/reservations/{{reservationId}}
+
+###
+# Aktualizowanie konkretnej rezerwacji
+PUT {{host}}/reservations/{{reservationId}}
+Content-Type: application/json
+
+{
+  "startDate": "2024-01-02T14:00:00Z",
+  "endDate": "2024-01-04T11:00:00Z"
+}
+
+###
+# Anulowanie konkretnej rezerwacji
+DELETE {{host}}/reservations/{{reservationId}}

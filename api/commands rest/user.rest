@@ -1,0 +1,38 @@
+# Pobranie wszystkich użytkowników
+GET http://localhost:3000/users
+
+###
+
+# Pobranie użytkownika o określonym ID
+GET http://localhost:3000/users/65ac303e845e1fbd3ef61a23
+
+###
+
+# Dodanie nowego użytkownika
+POST http://localhost:3000/users/register
+Content-Type: application/json
+
+ {
+  "username": "nowyUzytkownik222",
+  "password": "bezpieczneHaslo123222",
+  "email": "jan.kowalski222@example.com"
+  }
+  
+
+
+###
+
+# Aktualizacja danych użytkownika
+PUT http://localhost:3000/users/65ac303e845e1fbd3ef61a23
+Content-Type: application/json
+
+{
+    "firstName": "Janek",
+    "lastName": "Nowak"
+}
+
+###
+
+# Usunięcie użytkownika
+DELETE http://localhost:3000/users/65ac303e845e1fbd3ef61a22
+

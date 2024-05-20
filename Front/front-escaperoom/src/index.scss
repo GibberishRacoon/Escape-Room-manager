@@ -1,0 +1,224 @@
+$background: #18181b;
+$theme-50: #fbf4ff;
+$theme-100: #f7e8ff;
+$theme-200: #efd0fe;
+$theme-300: #e5abfc;
+$theme-400: #d679f9;
+$theme-500: #c246ef;
+$theme-600: #a826d3;
+$theme-700: #8e1caf;
+$theme-800: #791a93;
+$theme-900: #631a75;
+$theme-950: #40044e;
+
+$good-review: #33ff00;
+$neutral-review: #ffff00;
+$bad-review: #fe2014;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap");
+
+@mixin reviewText($type) {
+  font-weight: bold;
+
+  @if $type == bad {
+    color: $bad-review;
+  } @else if $type == good {
+    color: $good-review;
+  } @else {
+    color: $neutral-review;
+  }
+}
+
+.goodReview {
+  @include reviewText(good);
+}
+
+.neutralReview {
+  @include reviewText(neutral);
+}
+
+.badReview {
+  @include reviewText(bad);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $background;
+  color: $theme-50;
+  font-family: "Montserrat", sans-serif;
+
+  min-height: 100vh;
+}
+
+details {
+  user-select: none;
+}
+
+details > summary span.category-icon {
+  transition: all 0.3s;
+  margin-left: 10px;
+}
+
+details[open] summary span.category-icon {
+  transform: rotate(180deg);
+}
+
+details > div {
+  padding-top: 10px;
+}
+
+summary {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.topbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 10px;
+  gap: 10px;
+  z-index: 100;
+  background-color: $background;
+  border-bottom: 1px solid rgba($theme-100, 0.1);
+  color: $theme-100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-height: 50px;
+  }
+}
+
+.main {
+  padding-top: 70px;
+
+  .content {
+    margin-inline: 10vw;
+  }
+
+  .category {
+    h2 {
+      position: relative;
+      margin-block: 15px;
+    }
+    h2::after {
+      position: absolute;
+
+      content: "";
+      width: 30px;
+      height: 5px;
+      background: linear-gradient(to right, $theme-400, transparent);
+      bottom: -5px;
+      left: 0px;
+    }
+  }
+}
+
+.list {
+  margin: 10px;
+  border: 1px solid rgba($theme-100, 0.1);
+  border-radius: 5px;
+  max-height: 300px;
+  min-width: 30vw;
+  max-width: 300px;
+  overflow-y: auto;
+
+  ul {
+    list-style: none;
+
+    li {
+      padding: 5px;
+
+      &:nth-of-type(even) {
+        background-color: rgba($theme-500, 0.1);
+      }
+    }
+  }
+}
+
+.dashboard {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.myMap {
+  height: 400px;
+}
+
+.leaflet-container {
+  width: 50%;
+  height: 100%;
+}
+//new style
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: rgb(32, 28, 28);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.button {
+  margin: 5px;
+  padding: 4px 12px; /* Jeszcze mniejszy padding */
+  border: 1px solid #60179c; /* Delikatna obramówka zamiast wypełnienia */
+  background-color: transparent; /* Przezroczyste tło */
+  color: #60179c; /* Fioletowy tekst */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 15px; /* Lekko zaokrąglone rogi */
+  font-size: 0.8rem; /* Mniejszy rozmiar czcionki dla delikatniejszego wyglądu */
+  font-weight: 600; /* Nieco pogrubiona czcionka dla lepszej czytelności */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Bardziej subtelny cień */
+}
+
+.button:hover {
+  background-color: #60179c; /* Fioletowe tło przy najechaniu */
+  color: #fff; /* Biały tekst na hover */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Silniejszy cień dla efektu wypukłości */
+}
+
+/* Alternatywny przycisk z gradientem */
+.button-gradient {
+  border: none;
+  color: #fff;
+  background-image: linear-gradient(
+    to right,
+    #9b4dca,
+    #60179c
+  ); /* Lekki gradient */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Subtelny cień */
+}
+
+.button-gradient:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Silniejszy cień dla efektu wypukłości */
+}

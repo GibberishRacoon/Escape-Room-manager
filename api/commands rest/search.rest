@@ -1,0 +1,10 @@
+# Wyszukiwanie pokojów z zaawansowanymi filtrami
+GET http://localhost:3000/search?startDate=2024-01-01&endDate=2024-01-10&capacity=2
+Accept: application/json
+
+###
+
+# Historia rezerwacji i działań użytkownika
+GET http://localhost:3000/search/reservation2/activity
+Accept: application/json
+

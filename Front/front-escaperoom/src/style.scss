@@ -1,0 +1,131 @@
+// $background: #18181b;
+// $theme-50: #fbf4ff;
+// $theme-100: #f7e8ff;
+// $theme-200: #efd0fe;
+// $theme-300: #e5abfc;
+// $theme-400: #d679f9;
+// $theme-500: #c246ef;
+// $theme-600: #a826d3;
+// $theme-700: #8e1caf;
+// $theme-800: #791a93;
+// $theme-900: #631a75;
+// $theme-950: #40044e;
+
+// @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap");
+
+// * {
+//   box-sizing: border-box;
+//   margin: 0;
+//   padding: 0;
+// }
+
+// body {
+//   background-color: $background;
+//   color: $theme-50;
+//   font-family: "Montserrat", sans-serif;
+
+//   min-height: 100vh;
+// }
+
+// details {
+//   user-select: none;
+// }
+
+// details > summary span.category-icon {
+//   transition: all 0.3s;
+//   margin-left: 10px;
+// }
+
+// details[open] summary span.category-icon {
+//   transform: rotate(180deg);
+// }
+
+// details > div {
+//   padding-top: 10px;
+// }
+
+// summary {
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+//   cursor: pointer;
+// }
+
+// summary::-webkit-details-marker {
+//   display: none;
+// }
+
+// .nav {
+//   display: flex;
+//   width: 100%;
+//   justify-content: space-around;
+//   flex-wrap: wrap;
+//   padding: 10px;
+//   gap: 10px;
+
+//   background-color: $background;
+//   border-bottom: 1px solid rgba($theme-100, 0.1);
+//   color: $theme-100;
+//   position: fixed;
+
+//   div {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     gap: 20px;
+//     max-height: 50px;
+//   }
+// }
+
+// .main {
+//   padding-top: 70px;
+
+//   .content {
+//     margin-inline: 10vw;
+//   }
+
+//   .category {
+//     h2 {
+//       position: relative;
+//       margin-block: 15px;
+//     }
+//     h2::after {
+//       position: absolute;
+
+//       content: "";
+//       width: 30px;
+//       height: 5px;
+//       background: linear-gradient(to right, $theme-400, transparent);
+//       bottom: -5px;
+//       left: 0px;
+//     }
+//   }
+// }
+
+// .list {
+//   margin: 10px;
+//   border: 1px solid rgba($theme-100, 0.1);
+//   border-radius: 5px;
+//   max-height: 300px;
+//   min-width: 30vw;
+//   max-width: 300px;
+//   overflow-y: auto;
+
+//   ul {
+//     list-style: none;
+
+//     li {
+//       padding: 5px;
+
+//       &:nth-of-type(even) {
+//         background-color: rgba($theme-500, 0.1);
+//       }
+//     }
+//   }
+// }
+
+// .dashboard {
+//   display: flex;
+//   gap: 10px;
+//   flex-wrap: wrap;
+// }

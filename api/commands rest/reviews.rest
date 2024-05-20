@@ -1,0 +1,36 @@
+@host = http://localhost:3000
+#@reviewId = 65ad87155a6153b152fb5656
+
+###
+
+# Get all reviews
+GET {{host}}/reviews
+
+###
+
+# Create a new review
+POST {{host}}/reviews
+Content-Type: application/json
+
+{
+  "user": "65ac303e845e1fbd3ef61a26",
+  "room": "65ac4744845e1fbd3ef61a36",
+  "rating": 5,
+  "comment": "Great experience, clean and well-maintained."
+}
+
+###
+
+# Update a review
+PUT {{host}}/reviews/65ad87155a6153b152fb5656
+Content-Type: application/json
+
+{
+  "rating": 4,
+  "comment": "Updated comment: still great but noticed some wear and tear."
+}
+
+###
+
+# Delete a review
+DELETE {{host}}/reviews/65ad87155a6153b152fb5656

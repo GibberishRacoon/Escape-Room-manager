@@ -1,0 +1,39 @@
+# Pobieranie listy wszystkich pokojów
+GET http://localhost:3000/rooms
+Accept: application/json
+
+###
+
+# Pobieranie szczegółów konkretnego pokoju o podanym ID
+GET http://localhost:3000/rooms/65aed156b7e1df44f87b8fdf
+Accept: application/json
+
+###
+
+# Dodawanie nowego pokoju (wysyłając dane w formie JSON)
+POST http://localhost:3000/rooms
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Pokój 3",
+  "capacity": 69
+}
+
+###
+
+# Aktualizacja danych pokoju o podanym ID (wysyłając dane w formie JSON)
+PUT http://localhost:3000/rooms/{room_id}
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Nowy pokój 1",
+  "capacity": 10
+}
+
+###
+
+# Usuwanie pokoju o podanym ID
+DELETE http://localhost:3000/rooms/{room_id}
+Accept: application/json

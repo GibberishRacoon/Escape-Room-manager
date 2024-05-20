@@ -1,0 +1,7 @@
+### Generowanie raportu o pokojach
+GET http://localhost:3000/reports/rooms
+Accept: application/json
+
+### Generowanie raportu o rezerwacjach
+GET http://localhost:3000/reports/reservations
+Accept: application/json
